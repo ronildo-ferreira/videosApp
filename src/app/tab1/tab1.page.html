@@ -5,23 +5,58 @@
 </ion-header>
 <ion-content [fullscreen]="true" color="light">
   <ion-searchbar placeholder="Buscar"></ion-searchbar>
+
   <ion-list>
-    <ion-item lines="full">
-      <ion-thumbnail slot="start">
-        <img
-          src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/Aej7rR73kpAKce6XXBLeqijAwPD.jpg"
-        />
-      </ion-thumbnail>
-      <ion-label class="ion-text-wrap">
-        <div>
-          <h1>Esquadrão Trovão (2021)</h1>
-          <p>09/04/2021 (BR) 1h 47m</p>
-          <p>Ação, Aventura, Comédia, Fantasia</p>
-        </div>
-      </ion-label>
-      <ion-chip color="success" outline>
-        <ion-label>58%</ion-label>
-      </ion-chip>
-    </ion-item>
+
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-thumbnail slot="start">
+          <img
+            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/Aej7rR73kpAKce6XXBLeqijAwPD.jpg"
+          />
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap">
+          <div>
+            <h1>Esquadrão Trovão (2021)</h1>
+            <p>09/04/2021 (BR) 1h 47m</p>
+            <p>Ação, Aventura, Comédia, Fantasia</p>
+          </div>
+        </ion-label>
+        <ion-chip color="success" outline>
+          <ion-label>58%</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-thumbnail slot="start">
+          <img
+            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yXhjueyyNNrGinwM9WIxuwNqzbm.jpg"
+          />
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap">
+          <div>
+            <h1>22 Contra a Terra (2021)</h1>
+            <p>30/04/2021 (BR)</p>
+            <p>Família, Animação, Comédia</p>
+          </div>
+        </ion-label>
+        <ion-chip color="success" outline>
+          <ion-label>71%</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
   </ion-list>
 </ion-content>
