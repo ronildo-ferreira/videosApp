@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
-    <ion-title> Vídeos App </ion-title>
+    <ion-title>{{titulo}} Vídeos App </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true" color="light">
@@ -8,101 +8,26 @@
 
   <ion-list>
 
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let filme of listaVideos">
       <ion-item lines="full">
         <ion-thumbnail slot="start">
           <img
-            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/Aej7rR73kpAKce6XXBLeqijAwPD.jpg"
+            [src]="filme.cartaz"
           />
         </ion-thumbnail>
         <ion-label class="ion-text-wrap">
           <div>
-            <h1>Esquadrão Trovão (2021)</h1>
-            <p>09/04/2021 (BR) 1h 47m</p>
-            <p>Ação, Aventura, Comédia, Fantasia</p>
+            <h1>{{filme.nome}}</h1>
+            <p>{{filme.lancamento}} - {{filme.duracao}}</p>
+            <ion-badge color="light" *ngFor="let genero of filme.genero">{{genero}}</ion-badge>
           </div>
         </ion-label>
         <ion-chip color="success" outline>
-          <ion-label>58%</ion-label>
+          <ion-label>{{filme.classificacao}}%</ion-label>
         </ion-chip>
       </ion-item>
       <ion-item-options side="end">
         <ion-item-option color="amarelo" (click)="exibirAlertaFavorito()">
-          <ion-icon slot="icon-only" name="star"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item lines="full">
-        <ion-thumbnail slot="start">
-          <img
-            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yXhjueyyNNrGinwM9WIxuwNqzbm.jpg"
-          />
-        </ion-thumbnail>
-        <ion-label class="ion-text-wrap">
-          <div>
-            <h1>22 Contra a Terra (2021)</h1>
-            <p>30/04/2021 (BR)</p>
-            <p>Família, Animação, Comédia</p>
-          </div>
-        </ion-label>
-        <ion-chip color="success" outline>
-          <ion-label>72%</ion-label>
-        </ion-chip>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option color="amarelo"  (click)="exibirAlertaFavorito()">
-          <ion-icon slot="icon-only" name="star"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item lines="full">
-        <ion-thumbnail slot="start">
-          <img
-            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hJgEf18Sw8iwtQCzCSIQqGOLaq6.jpg"
-          />
-        </ion-thumbnail>
-        <ion-label class="ion-text-wrap">
-          <div>
-            <h1>Nova Ordem Espacial (2021)</h1>
-            <p>05/04/2021 (BR) 2h 17m</p>
-            <p>Drama, Fantasia, Ficção científica</p>
-          </div>
-        </ion-label>
-        <ion-chip color="success" outline>
-          <ion-label>71%</ion-label>
-        </ion-chip>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option color="amarelo"  (click)="exibirAlertaFavorito()">
-          <ion-icon slot="icon-only" name="star"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item lines="full">
-        <ion-thumbnail slot="start">
-          <img
-            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iyOgNaaDX67AUMWlzsGZVO1luoh.jpg"
-          />
-        </ion-thumbnail>
-        <ion-label class="ion-text-wrap">
-          <div>
-            <h1>New Gods Nezha Reborn (2021)</h1>
-            <p>12/02/2021 (CN) 1h 56m</p>
-            <p>Animação, Ação, Fantasia</p>
-          </div>
-        </ion-label>
-        <ion-chip color="success" outline>
-          <ion-label>86%</ion-label>
-        </ion-chip>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option color="amarelo"  (click)="exibirAlertaFavorito()">
           <ion-icon slot="icon-only" name="star"></ion-icon>
         </ion-item-option>
       </ion-item-options>
