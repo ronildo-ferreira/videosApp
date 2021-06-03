@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {}
 
   login() {
-    if ((this.email === 'admin@admin.com' && this.senha === 'admin') || true) {
+    if ((this.email === 'admin@admin.com' && this.senha === 'admin')) {
       this.route.navigateByUrl('tabs/tab1');
       this.presentToast('Seja Bem Vindo!', 'success');
     } else {
